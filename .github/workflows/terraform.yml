@@ -24,6 +24,15 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      # Debug step
+      - name: Debug Secrets
+        run: |
+          echo "Access Key Length: ${#AWS_ACCESS_KEY_ID}"
+          echo "Secret Key Length: ${#AWS_SECRET_ACCESS_KEY}"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
       # Step 2 - Configure AWS credentials
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
