@@ -1,0 +1,61 @@
+# =========================
+# Terraform
+# =========================
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfstate.d/
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# =========================
+# Sensitive Variables
+# =========================
+*.tfvars
+*.tfvars.json
+!example.tfvars    # keep example file for reference
+
+# =========================
+# AWS Credentials
+# =========================
+*.pem
+*.key
+.env
+.aws/
+credentials
+config
+
+# =========================
+# Kubernetes
+# =========================
+*.kubeconfig
+kubeconfig
+.kube/
+
+# =========================
+# SSL Certificates
+# =========================
+*.crt
+*.key
+*.csr
+nginx-selfsigned.*
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# =========================
+# IDE Files
+# =========================
+.vscode/
+.idea/
+*.iml
