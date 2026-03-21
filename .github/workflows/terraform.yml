@@ -16,7 +16,7 @@ env:
 
 jobs:
   terraform:
-    name: Terraform Plan & Apply
+    name: Terraform Init, Plan & Apply
     runs-on: ubuntu-latest
 
     steps:
@@ -59,7 +59,13 @@ jobs:
       - name: Terraform Format Check
         run: terraform fmt -check
         continue-on-error: true
+      
+      # Step 6 - Terraform State refresh
+      - name: Terraform State Refresh
+        run: terraform state --refresh
+        continue-on-error: true
 
+        
       # Step 7 - Terraform Plan (runs on every push and PR)
       - name: Terraform Plan
         run: terraform plan -out=tfplan
