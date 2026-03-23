@@ -62,15 +62,13 @@ jobs:
       
       # Step 6 - Terraform State refresh
       - name: Terraform State Refresh
-        run: terraform state --refresh
+        run: terraform refresh
         continue-on-error: true
 
         
       # Step 7 - Terraform Plan (runs on every push and PR)
       - name: Terraform Plan
         run: terraform plan -out=tfplan
-        env:
-          TF_VAR_region: ${{ secrets.AWS_REGION }}
 
       # Step 8 - Terraform Apply (only on push to main, not PRs)
       - name: Terraform Apply

@@ -16,6 +16,11 @@ data "external" "my_public_ip" {
   program = ["bash", "-c", "echo '{\"ip\":\"'$(curl -s ifconfig.me)'\"}'"]
 }
 
+import {
+  to = aws_kms_alias.this["cluster"] # Use the correct resource name and index from your config
+  id = "alias/eks/my-terraform-eks-cluster"
+}
+
 
 # Use the VPC module to create a new VPC with public and private subnets
 module "vpc" {
