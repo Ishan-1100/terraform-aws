@@ -24,3 +24,21 @@ Private Subnets ← EKS Worker Nodes
 │
 ▼
 NAT Gateway → Internet (outbound only)
+
+
+## Prerequisites
+
+- AWS Account
+- Terraform >= 1.5
+- AWS CLI configured
+- GitHub repository secrets:
+  - `AWS_ACCESS_KEY_ID`
+  - `AWS_SECRET_ACCESS_KEY`
+  - `AWS_REGION` (optional)
+
+## How to use
+
+1. Clone the repository
+```bash
+git clone https://github.com/Ishan-1100/terraform-aws.git
+cd terraform-aws
