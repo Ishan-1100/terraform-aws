@@ -29,3 +29,7 @@ cd terraform-aws
 terraform init
 terraform plan
 terraform apply
+
+Event,Action
+Pull Request,terraform plan
+Push to main,terraform apply
