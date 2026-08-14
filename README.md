@@ -30,8 +30,7 @@ terraform init
 terraform plan
 terraform apply
 
-Pipeline
-
+## Pipeline
 
 EventActionPull Requestterraform planPush to mainterraform apply
 Security highlights
@@ -42,7 +41,7 @@ IRSA enabled
 State file encrypted
 
 Cleanup
-Bashterraform destroy
+terraform destroy
 Note: This will incur AWS costs. Always destroy resources after testing.
 
 Author: Ishan Ahuja
