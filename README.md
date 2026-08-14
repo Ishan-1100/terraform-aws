@@ -30,8 +30,7 @@ terraform init
 terraform plan
 terraform apply
 
-## Pipeline
-
+Pipeline
 EventActionPull Requestterraform planPush to mainterraform apply
 Security highlights
 
