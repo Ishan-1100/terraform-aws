@@ -14,16 +14,7 @@ Production-style Infrastructure as Code to provision a secure Amazon EKS cluster
 - GitHub Actions CI/CD pipeline (plan on PR, apply on main)
 
 ## Architecture
-Internet
-│
-▼
-Public Subnets (ALB / Bastion if needed)
-│
-▼
-Private Subnets ← EKS Worker Nodes
-│
-▼
-NAT Gateway → Internet (outbound only)
+Internet -> Public Subnets (ALB / Bastion if needed) -> Private Subnets ← EKS Worker Nodes -> NAT Gateway → Internet (outbound only)
 
 
 ## Prerequisites
