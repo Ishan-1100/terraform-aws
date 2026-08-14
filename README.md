@@ -30,6 +30,20 @@ terraform init
 terraform plan
 terraform apply
 
-Event,Action
-Pull Request,terraform plan
-Push to main,terraform apply
+Pipeline
+
+
+EventActionPull Requestterraform planPush to mainterraform apply
+Security highlights
+
+Nodes run in private subnets
+API endpoint restricted by IP
+IRSA enabled
+State file encrypted
+
+Cleanup
+Bashterraform destroy
+Note: This will incur AWS costs. Always destroy resources after testing.
+
+Author: Ishan Ahuja
+DevSecOps | Cloud Infrastructure
